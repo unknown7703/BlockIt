@@ -1,0 +1,28 @@
+
+{   
+    "manifest_version": 3,
+    "name":"BlockIt",
+    "version":"1.0.0",
+    "author":"T Aatreya-unknown7703(github)",
+    "desription":"Custome website blocker",
+    "icons":{
+        "16":"icons/iconBlockIt16.ico",
+        "48":"icons/iconBlockIt48.ico",
+        "128":"icons/iconBlockIt128.ico"
+    },
+    "action": {
+        "default_icon": {
+          "16": "icons/iconBlockIt16.png",
+          "24": "icons/iconBlockIt24.png",
+          "32": "icons/iconBlockIt32.png" 
+        },
+        "default_title":"BlockIt",
+        "default_popup":"popup.html"
+    },
+    "permission":["storage","tabs","<all_urls>"],
+    "background":{
+        "service_worker":"background.js"
+    },
+    "short_name": "BlockIt"   
+
+}
