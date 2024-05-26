@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>BlockIt</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="popup.css">
+    </head>
+    <body >
+        
+        <div class="outer_box">
+            <img src="icons/icon128.png" alt="Killa">
+            <p > Start Blocking</p>
+            <label class="switch" >
+                <input type="checkbox" id="toggle_main">
+                <span class="slider round"></span>
+              </label>
+              <p > add current page to blocklist</p>
+              <p class="current_text" id="current_tab_text"> current tab url will show here </p>
+              <button class="block" id="addBlock"> BLOCK </button>
+              <button class="configure" id="options_button">options</button>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>

@@ -4,25 +4,29 @@
     "name":"BlockIt",
     "version":"1.0.0",
     "author":"T Aatreya-unknown7703(github)",
-    "desription":"Custome website blocker",
+    "description":"Custome website blocker",
     "icons":{
-        "16":"icons/iconBlockIt16.ico",
-        "48":"icons/iconBlockIt48.ico",
-        "128":"icons/iconBlockIt128.ico"
+        "16":"icons/icon16.png",
+        "48":"icons/icon48.png",
+        "128":"icons/icon128.png"
     },
     "action": {
         "default_icon": {
-          "16": "icons/iconBlockIt16.png",
-          "24": "icons/iconBlockIt24.png",
-          "32": "icons/iconBlockIt32.png" 
+          "16": "icons/icon16.png",
+          "24": "icons/icon24.png",
+          "32": "icons/icon32.png" ,
+          "48": "icons/icon48.png",
+          "128":"icons/icon128.png"
         },
         "default_title":"BlockIt",
         "default_popup":"popup.html"
     },
-    "permission":["storage","tabs","<all_urls>"],
+    "permissions":["storage","tabs"],
     "background":{
         "service_worker":"background.js"
     },
+    
+    "options_page": "options.html",
     "short_name": "BlockIt"   
 
 }
