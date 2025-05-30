@@ -18,6 +18,23 @@ const getToggle =async()=>{
   return toggle;
 }
 //const setLink =(link)
+//storage helper
+const setLink = async (link) => {
+  const { [linksArray]: currentLinks = [] } = await chrome.storage.sync.get(linksArray);
+  if (!currentLinks.includes(link)) {
+    currentLinks.push(link);
+    chrome.storage.sync.set({ [linksArray]: currentLinks });
+  }
+};
+
+// Add event listener for the 'BLOCK' button
+blockNew.onclick = async () => {
+  chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
+    const currentTabUrl = tabs[0].url;
+    await setLink(currentTabUrl);
+    document.getElementById('current_tab_text').textContent = `Blocked: ${currentTabUrl}`;
+  });
+};
 //functions buttton
 optionsB.onclick =()=>{
     if (chrome.runtime.openOptionsPage) {
